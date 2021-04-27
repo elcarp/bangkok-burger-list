@@ -11,10 +11,10 @@ function Navigation() {
 						<img src={Burger}/>
 					</li>
 					<li>
-						{/* <Link to='/transfer-app/quote'>Quote</Link> */}
+						<Link to='/about'>About</Link>
 					</li>
 					<li>
-						{/* <Link to='/transfer-app/transactions'>Transactions</Link> */}
+						<Link to='/contact'>Contact us</Link>
 					</li>
 				</ul>
 			</nav>

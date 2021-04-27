@@ -9,7 +9,7 @@ function Main() {
 		<>
 			<div className='App'>
 				<Switch>
-					<Route path='/transfer-app/transactions'>
+					<Route path='/about'>
 						<About />
 					</Route>
 					<Route path='/contact'>

@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react'
-import { Link } from 'react-router-dom'
 
 const About: FunctionComponent = () => {
 	return (
