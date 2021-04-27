@@ -8,7 +8,7 @@ function Navigation() {
 			<nav>
 				<ul>
 					<li className='logo'>
-						<img src={Burger} alt='logo'/>
+						<a href='/'><img src={Burger} alt='logo'/></a>
 					</li>
 					<li>
 						<Link to='/about'>About</Link>
