@@ -1,9 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-// import burger from './burger.png'
-// import Home from '../pages/home'
-// import Quote from '../pages/quote'
-// import Transactions from '../pages/transactions'
+import About from '../pages/about'
+import Contact from '../pages/contact'
+import Home from '../pages/home'
 
 function Main() {
 	return (
@@ -11,6 +10,17 @@ function Main() {
 			<div className='App'>
 				{/* <img src={burger} className='App-logo' alt='burger' /> */}
 				<p>This is going to be an app about burgers</p>
+				<Switch>
+					<Route path='/transfer-app/transactions'>
+						<About />
+					</Route>
+					<Route path='/contact'>
+						<Contact />
+					</Route>
+					<Route path='/'>
+						<Home />
+					</Route>
+				</Switch>
 			</div>
 		</>
 	)
