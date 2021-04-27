@@ -7,8 +7,8 @@ function Navigation() {
 		<>
 			<nav>
 				<ul>
-					<li className="logo">
-						<img src={Burger}/>
+					<li className='logo'>
+						<img src={Burger} alt='logo'/>
 					</li>
 					<li>
 						<Link to='/about'>About</Link>
