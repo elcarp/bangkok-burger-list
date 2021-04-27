@@ -8,8 +8,6 @@ function Main() {
 	return (
 		<>
 			<div className='App'>
-				{/* <img src={burger} className='App-logo' alt='burger' /> */}
-				<p>This is going to be an app about burgers</p>
 				<Switch>
 					<Route path='/transfer-app/transactions'>
 						<About />

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Burger from '../assets/images/burger.png'
 
 function Navigation() {
 	return (
@@ -7,7 +8,7 @@ function Navigation() {
 			<nav>
 				<ul>
 					<li className="logo">
-						{/* <Link to='/transfer-app'>FXApp</Link> */}
+						<img src={Burger}/>
 					</li>
 					<li>
 						{/* <Link to='/transfer-app/quote'>Quote</Link> */}
