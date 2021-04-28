@@ -16,6 +16,18 @@ li.logo:hover {
   opacity: 0.6;
 }
 
+.overlay {
+  width: 100%;
+  height: 30vh;
+  background: rgb(17 17 17 / 30%);
+  z-index: 1;
+  position: absolute;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
