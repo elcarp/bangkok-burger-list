@@ -1,0 +1,21 @@
+{
+    "burgerPlaces": [{
+            "name": "Daniel Thaiger",
+            "location": "Asoke",
+            "price_range": "$$",
+            "ranking": 1,
+            "description": "Best burger",
+            "delivery": ["Foodpanda"],
+            "tags": ["good value", "best all around"]
+        },
+        {
+            "name": "Billy's Smoke House",
+            "location": "Ploen Chit",
+            "price_range": "$$$",
+            "ranking": 2,
+            "description": "Best burger",
+            "delivery": ["Foodpanda"],
+            "tags": ["pricey", "best all around"]
+        }
+    ]
+}
