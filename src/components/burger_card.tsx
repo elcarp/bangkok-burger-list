@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import data from '../api/burger_places.json'
-console.log(data)
+
 const burgerPlaces = data.burgerPlaces
 
 const BurgerCard: FunctionComponent = () => {
@@ -8,12 +8,11 @@ const BurgerCard: FunctionComponent = () => {
 		return (
 			<>
 				<div className='bg-white rounded-lg flex w-1/2 mt-10 p-4'>
-					Name: {name}
+					<label>Name</label> {name}
 				</div>
 			</>
 		)
 	})
-	console.log('data?', burgerData)
 	return <>{burgerData}</>
 }
 
