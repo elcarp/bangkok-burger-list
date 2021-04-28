@@ -11,6 +11,9 @@ function Navigation() {
 						<a href='/'><img src={Burger} alt='logo'/></a>
 					</li>
 					<li>
+						<Link to='/'>The List</Link>
+					</li>
+					<li>
 						<Link to='/about'>About</Link>
 					</li>
 					<li>
