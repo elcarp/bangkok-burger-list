@@ -4,7 +4,10 @@ const Home: FunctionComponent = () => {
 	return (
 		<>
 			<div className='hero'>
-				<h1>The ultimate burger ranking list in Bangkok</h1>
+				<div className='hero-content'>
+					<h1>Bangkok Burger List</h1>
+					<p>The ultimate burger ranking list in Bangkok</p>
+				</div>
 			</div>
 		</>
 	)

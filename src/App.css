@@ -175,7 +175,8 @@ nav {
 /* import Burger from '../assets/images/burger.png' */
 
 
-.hero h1 {
+.hero h1,
+.hero p {
   margin-top: 0;
   color: #fff;
 }
