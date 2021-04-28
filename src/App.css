@@ -12,6 +12,10 @@ li.logo img {
   width: 2.5rem;
 }
 
+li.logo:hover {
+  opacity: 0.6;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
