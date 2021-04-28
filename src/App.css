@@ -206,6 +206,6 @@ label {
 
 @media (max-width: 569px) {
   .hero {
-    background-position: 0 -110px;
+    background-position: -100px -150px !important;
   }
 }
