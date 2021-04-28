@@ -15,7 +15,16 @@
             "ranking": 2,
             "description": "Best burger",
             "delivery": ["Foodpanda"],
-            "tags": ["pricey", "best all around"]
+            "tags": ["smokey", "best all around"]
+        },
+        {
+            "name": "Prime Burger",
+            "location": ["Phrom Phong", "Phra Khanong"],
+            "price_range": "$$",
+            "ranking": 3,
+            "description": "Best burger",
+            "delivery": ["Foodpanda"],
+            "tags": ["smash burgers"]
         }
     ]
 }

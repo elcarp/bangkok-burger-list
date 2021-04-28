@@ -198,3 +198,8 @@ nav {
 .ranking-section {
   background: #f69a01;
 }
+
+label {
+  font-weight: bold;
+  margin-right: 2rem;
+}
