@@ -16,7 +16,7 @@ const BurgerCard: FunctionComponent = () => {
 		}: any) => {
 			return (
 				<>
-					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4'>
+					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg'>
 						<div className='w-3/4 grid grid-cols-2'>
 							<label>Name</label> <span className='capitalize'>{name}</span>
 							<label>Location</label>{' '}
