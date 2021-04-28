@@ -9,7 +9,7 @@ const About: FunctionComponent = () => {
 					The goal of this site is to maintain a regular list of where to find
 					delicious burgers in Bangkok.
 				</p>
-				<h3>Why?</h3>
+				<h3 className='mt-10'>Why?</h3>
 				<p>Because burgers are the best food, obviously.</p>
 			</div>
 		</>
