@@ -203,3 +203,9 @@ label {
   font-weight: bold;
   margin-right: 2rem;
 }
+
+@media (max-width: 569px) {
+  .hero {
+    background-position: contain;
+  }
+}
