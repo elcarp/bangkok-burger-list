@@ -18,10 +18,19 @@
             "tags": ["smokey", "best all around"]
         },
         {
+            "name": "Paper Butter and the Burger",
+            "location": ["Ari"],
+            "price_range": "$$",
+            "ranking": 3,
+            "description": "Best burger",
+            "delivery": ["Foodpanda"],
+            "tags": ["amazing fries", "cool environment"]
+        },
+        {
             "name": "Prime Burger",
             "location": ["Phrom Phong", "Phra Khanong"],
             "price_range": "$$",
-            "ranking": 3,
+            "ranking": 4,
             "description": "Best burger",
             "delivery": ["Foodpanda"],
             "tags": ["smash burgers"]
