@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 112px;
 }
 
 .App-logo {
@@ -156,6 +157,7 @@ nav {
   z-index: 9999;
   position: fixed;
   width: 100%;
+  top: 0;
 }
 
 /* Home */
@@ -168,7 +170,6 @@ nav {
   align-items: center;
   justify-content: center;
   background-attachment: fixed;
-  padding-top: 112px;
 }
 
 /* import Burger from '../assets/images/burger.png' */
