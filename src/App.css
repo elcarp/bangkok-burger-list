@@ -133,8 +133,9 @@ nav a:focus {
   outline: none;
 }
 
-nav a:hover {
-  opacity: 0.5;
+nav a:hover,
+nav a:active {
+  color: #f69a01 !important;
 }
 
 li.logo {
@@ -142,13 +143,13 @@ li.logo {
   float: left;
   width: 3.3rem;
   height: 3.3rem;
-  border: 1px solid white;
+  border: 1px solid #f69a01;
   border-radius: 100px;
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
   cursor: pointer;
-  background: #fff;
+  background: #f69a01;
   animation: App-logo-spin infinite 20s linear;
 }
 
@@ -179,4 +180,8 @@ nav {
 .hero p {
   margin-top: 0;
   color: #fff;
+}
+
+.ranking-section {
+  background: #f69a01;
 }
