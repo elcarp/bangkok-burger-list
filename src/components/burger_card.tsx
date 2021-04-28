@@ -29,8 +29,8 @@ const BurgerCard: FunctionComponent = () => {
 							<span className='capitalize'>{delivery.join(', ')}</span>
 							<label>Tags</label>{' '}
 							<span className='capitalize'>{tags.join(', ')}</span>
-							<label>Description</label>{' '}
-							<span className='capitalize'>{description}</span>
+							{/* <label>Description</label>{' '} */}
+							{/* <span className='capitalize'>{description}</span> */}
 						</div>
 					</div>
 				</>
