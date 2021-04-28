@@ -3,7 +3,8 @@ import React, { FunctionComponent } from 'react'
 const Contact: FunctionComponent = () => {
 	return (
 		<>
-			<h1>Contact Burgers</h1>
+			<h1>Want to tell us about a new burger place?</h1>
+			<p>Email: lise.carpenter@gmail.com</p>
 		</>
 	)
 }
