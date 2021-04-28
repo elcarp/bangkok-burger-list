@@ -182,7 +182,7 @@ nav {
   height: 30vh;
   background: url('/src/assets/images/bangkok-burger-list.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,10 +202,4 @@ nav {
 label {
   font-weight: bold;
   margin-right: 2rem;
-}
-
-@media (max-width: 569px) {
-  .hero {
-    background-position: -100px -150px !important;
-  }
 }
