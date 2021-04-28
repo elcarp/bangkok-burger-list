@@ -151,22 +151,30 @@ li.logo {
   animation: App-logo-spin infinite 20s linear;
 }
 
+nav {
+  box-shadow: #666 5px 1px 10px;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+}
+
 /* Home */
-.cta {
-  background: white;
-  width: 250px;
-  margin: auto;
-  margin-bottom: 1rem;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: #cccccc 2px 2px 10px;
-  cursor: pointer;
+.hero {
+  height: 30vh;
+  background: url('/src/assets/images/bangkok-burger-list.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  padding-top: 112px;
 }
 
-.cta:hover {
-  background: #ccc;
-}
+/* import Burger from '../assets/images/burger.png' */
 
-.cta-wrapper {
-  margin-top: 35px;
+
+.hero h1 {
+  margin-top: 0;
+  color: #fff;
 }
