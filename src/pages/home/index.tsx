@@ -13,6 +13,7 @@ const Home: FunctionComponent = () => {
 			</div>
 			<div className='w-full h-full ranking-section'>
 				<div className='p-10'>
+					<em className='text-white'>Last Updated: April 28, 2021</em>
 					<BurgerCard />
 				</div>
 			</div>
