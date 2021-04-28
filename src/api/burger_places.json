@@ -1,7 +1,7 @@
 {
     "burgerPlaces": [{
             "name": "Daniel Thaiger",
-            "location": "Asoke",
+            "location": ["Asoke"],
             "price_range": "$$",
             "ranking": 1,
             "description": "Best burger",
@@ -10,7 +10,7 @@
         },
         {
             "name": "Billy's Smoke House",
-            "location": "Ploen Chit",
+            "location": ["Ploen Chit"],
             "price_range": "$$$",
             "ranking": 2,
             "description": "Best burger",
