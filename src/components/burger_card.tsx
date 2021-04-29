@@ -4,9 +4,14 @@ import data from '../api/burger_places.json'
 
 const burgerPlaces = data.burgerPlaces
 const BurgerCard: FunctionComponent = () => {
-	const locationOptions = burgerPlaces.map(({ location }) => {
-		return { label: location, value: location }
-	})
+	const locationOptions = [
+		{ label: 'Ari', value: 'ari' },
+		{ label: 'Asoke', value: 'asoke' },
+		{ label: 'Phra Kanong', value: 'phra_kanong' },
+		{ label: 'Phrom Phong', value: 'phrom_phong' },
+		{ label: 'Ploen Chit', value: 'ploen_chit' },
+	]
+
 	const priceOptions = [
 		{ label: '$', value: '$' },
 		{ label: '$$', value: '$$' },
@@ -18,16 +23,20 @@ const BurgerCard: FunctionComponent = () => {
 		{ label: 'LINE MAN', value: 'line_man' },
 		{ label: 'GrabFood', value: 'grab_food' },
 		{ label: 'GoJek', value: 'go_jek' },
-    ]
-    const tagOptions = burgerPlaces.map(({ tags }) => {
-		return { label: tags, value: tags }
-	})
+	]
+	const tagOptions = [
+		{ label: 'Best All Around', value: 'best_all_around' },
+		{ label: 'Good Value', value: 'good_value' },
+		{ label: 'Amazing Fries', value: 'amazing_fries' },
+		{ label: 'Smokey', value: 'smokey' },
+		{ label: 'Cool Environment', value: 'cool_environment' },
+		{ label: 'Smash Burgers', value: 'smash_burgers' },
+		{ label: 'Vegetarian Friendly', value: 'vegetarian_friendly' },
+	]
 	const [selectedLocation, setSelectedLocation] = useState<any>()
 	const [selectedPriceRange, setSelectedPriceRange] = useState<any>()
-    const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
-    const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
-
-
+	const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
+	const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
 
 	const burgerData = burgerPlaces.map(
 		({ name, location, price_range, ranking, delivery, tags, description }) => {
