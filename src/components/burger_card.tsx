@@ -1,9 +1,10 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import data from '../api/burger_places.json'
 
 const burgerPlaces = data.burgerPlaces
-
 const BurgerCard: FunctionComponent = () => {
+	const [selectedLocation, setSelectedLocation] = useState<any>()
+
 	const burgerData = burgerPlaces.map(
 		({
 			name,
