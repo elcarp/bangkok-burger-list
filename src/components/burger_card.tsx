@@ -4,6 +4,16 @@ import data from '../api/burger_places.json'
 
 const burgerPlaces = data.burgerPlaces
 
+interface BurgerType {
+	name: string
+	location: string
+	 price_range: string
+	 ranking: string
+	 delivery: Array<string>
+	 tags: Array<string>
+	 description: string
+}
+
 const BurgerCard: FunctionComponent = () => {
 	const locationOptions = [
 		{ label: 'Ari', value: 'ari' },
@@ -44,17 +54,17 @@ const BurgerCard: FunctionComponent = () => {
 			return selectedLocation.value === location
 		})
 
-	const shownBurgers = !burgerLocation ? burgerPlaces : burgerLocation
+	const filteredBurgers = !burgerLocation ? burgerPlaces : burgerLocation
 
-	const allBurgerData = shownBurgers.map(
-		({ name, location, price_range, ranking, delivery, tags, description }: any) => {
+	const showBurgers = filteredBurgers.map(
+		({ name, location, price_range, ranking, delivery, tags, description }: BurgerType) => {
 			return (
 				<>
 					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg mx-auto'>
 						<div className='w-full md:w-3/4 grid grid-cols-2'>
 							<label>Name</label> <span className='capitalize'>{name}</span>
 							<label>Location</label>{' '}
-							<span className='capitalize'>{location}</span>
+							<span className='capitalize'>{location.replace(/_/g, " ")}</span>
 							<label>Price</label>{' '}
 							<span className='capitalize'>{price_range}</span>
 							<label>Ranking</label>{' '}
@@ -112,7 +122,7 @@ const BurgerCard: FunctionComponent = () => {
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 			</div>
-			{allBurgerData}
+			{showBurgers}
 		</>
 	)
 }
