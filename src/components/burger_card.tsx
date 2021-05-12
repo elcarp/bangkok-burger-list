@@ -121,6 +121,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={priceOptions}
 					onChange={setSelectedPriceRange}
 					placeholder='Price'
+					isDisabled={true}
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 				<Select
@@ -129,6 +130,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={deliveryOption}
 					onChange={setSelectedDeliveryOption}
 					placeholder='Delivery'
+					isDisabled={true}
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 				<Select
@@ -137,6 +139,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={tagOptions}
 					onChange={setSelectedTagOptions}
 					placeholder='Tags'
+					isDisabled={true}
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 			</div>
