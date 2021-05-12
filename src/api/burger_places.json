@@ -6,7 +6,7 @@
             "ranking": 1,
             "description": "Best burger",
             "delivery": ["Foodpanda"],
-            "tags": ["good_value", "best_all_around"]
+            "tags": ["good value", "best all around"]
         },
         {
             "name": "Billy's Smoke House",
@@ -15,7 +15,7 @@
             "ranking": 2,
             "description": "Best burger",
             "delivery": ["Foodpanda"],
-            "tags": ["smokey", "best_all_around"]
+            "tags": ["smokey", "best all around"]
         },
         {
             "name": "Paper Butter and the Burger",
@@ -24,7 +24,7 @@
             "ranking": 3,
             "description": "Best burger",
             "delivery": ["Foodpanda"],
-            "tags": ["amazing_fries", "cool_environment"]
+            "tags": ["amazing fries", "cool environment"]
         },
         {
             "name": "Prime Burger",
@@ -33,7 +33,7 @@
             "ranking": 4,
             "description": "Best burger",
             "delivery": ["Foodpanda"],
-            "tags": ["smash_burgers", "vegetarian_friendly"]
+            "tags": ["smash burgers", "vegetarian friendly"]
         }
     ]
 }

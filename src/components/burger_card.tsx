@@ -64,7 +64,7 @@ const BurgerCard: FunctionComponent = () => {
 						<div className='w-full md:w-3/4 grid grid-cols-2'>
 							<label>Name</label> <span className='capitalize'>{name}</span>
 							<label>Location</label>{' '}
-							<span className='capitalize'>{location}</span>
+							<span className='capitalize'>{location.replace(/_/g, " ")}</span>
 							<label>Price</label>{' '}
 							<span className='capitalize'>{price_range}</span>
 							<label>Ranking</label>{' '}
