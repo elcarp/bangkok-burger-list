@@ -113,7 +113,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={locationOptions}
 					onChange={setSelectedLocation}
 					placeholder='Location'
-					className='text-left w-1/4 z-50 mx-4'
+					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 				<Select
 					value={selectedPriceRange}
@@ -121,7 +121,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={priceOptions}
 					onChange={setSelectedPriceRange}
 					placeholder='Price'
-					className='text-left w-1/4 z-50 mx-4'
+					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 				<Select
 					value={selectedDeliveryOption}
@@ -129,7 +129,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={deliveryOption}
 					onChange={setSelectedDeliveryOption}
 					placeholder='Delivery'
-					className='text-left w-1/4 z-50 mx-4'
+					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 				<Select
 					value={selectedTagOptions}
@@ -137,7 +137,7 @@ const BurgerCard: FunctionComponent = () => {
 					options={tagOptions}
 					onChange={setSelectedTagOptions}
 					placeholder='Tags'
-					className='text-left w-1/4 z-50 mx-4'
+					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 			</div>
 			{!selectedLocation ? allBurgerData : filteredBurger}
