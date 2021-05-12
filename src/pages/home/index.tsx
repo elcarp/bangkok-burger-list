@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import  { FunctionComponent } from 'react'
 import BurgerCard from '../../components/burger_card'
 
 const Home: FunctionComponent = () => {
