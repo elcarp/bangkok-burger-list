@@ -4,6 +4,16 @@ import data from '../api/burger_places.json'
 
 const burgerPlaces = data.burgerPlaces
 
+interface BurgerType {
+	name: string
+	location: string
+	 price_range: string
+	 ranking: string
+	 delivery: Array<string>
+	 tags: Array<string>
+	 description: string
+}
+
 const BurgerCard: FunctionComponent = () => {
 	const locationOptions = [
 		{ label: 'Ari', value: 'ari' },
@@ -47,7 +57,7 @@ const BurgerCard: FunctionComponent = () => {
 	const filteredBurgers = !burgerLocation ? burgerPlaces : burgerLocation
 
 	const showBurgers = filteredBurgers.map(
-		({ name, location, price_range, ranking, delivery, tags, description }: any) => {
+		({ name, location, price_range, ranking, delivery, tags, description }: BurgerType) => {
 			return (
 				<>
 					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg mx-auto'>
