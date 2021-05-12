@@ -38,7 +38,7 @@ const BurgerCard: FunctionComponent = () => {
 	const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
 	const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
 
-	const burgerData = burgerPlaces.map(
+	const allBurgerData = burgerPlaces.map(
 		({ name, location, price_range, ranking, delivery, tags, description }) => {
 			return (
 				<>
@@ -46,7 +46,7 @@ const BurgerCard: FunctionComponent = () => {
 						<div className='w-full md:w-3/4 grid grid-cols-2'>
 							<label>Name</label> <span className='capitalize'>{name}</span>
 							<label>Location</label>{' '}
-							<span className='capitalize'>{location.join(', ')}</span>
+							<span className='capitalize'>{location}</span>
 							<label>Price</label>{' '}
 							<span className='capitalize'>{price_range}</span>
 							<label>Ranking</label>{' '}
@@ -63,6 +63,15 @@ const BurgerCard: FunctionComponent = () => {
 			)
 		}
 	)
+	const burgerLocation =
+		selectedLocation &&
+		burgerPlaces.filter(({ location }) => {
+			console.log(location)
+			return selectedLocation.value === location
+		})
+
+	console.log('burger location?', burgerLocation)
+
 	return (
 		<>
 			<div className='filter-wrapper w-full md:w-3/4 justify-center mt-10 block md:flex mx-auto'>
@@ -99,7 +108,7 @@ const BurgerCard: FunctionComponent = () => {
 					className='text-left w-1/4 z-50 mx-4'
 				/>
 			</div>
-			{burgerData}
+			{!selectedLocation ? allBurgerData : ''}
 		</>
 	)
 }

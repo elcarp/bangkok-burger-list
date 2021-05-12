@@ -1,7 +1,7 @@
 {
     "burgerPlaces": [{
             "name": "Daniel Thaiger",
-            "location": ["Asoke"],
+            "location": "asoke",
             "price_range": "$$",
             "ranking": 1,
             "description": "Best burger",
@@ -10,7 +10,7 @@
         },
         {
             "name": "Billy's Smoke House",
-            "location": ["Ploen Chit"],
+            "location": "ploen_chit",
             "price_range": "$$$",
             "ranking": 2,
             "description": "Best burger",
@@ -19,7 +19,7 @@
         },
         {
             "name": "Paper Butter and the Burger",
-            "location": ["Ari"],
+            "location": "ari",
             "price_range": "$$",
             "ranking": 3,
             "description": "Best burger",
@@ -28,7 +28,7 @@
         },
         {
             "name": "Prime Burger",
-            "location": ["Phrom Phong", "Phra Khanong"],
+            "location": "phrom_phong",
             "price_range": "$$",
             "ranking": 4,
             "description": "Best burger",
