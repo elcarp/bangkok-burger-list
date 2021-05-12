@@ -5,7 +5,6 @@ import data from '../api/burger_places.json'
 const burgerPlaces = data.burgerPlaces
 
 const BurgerCard: FunctionComponent = () => {
-
 	const locationOptions = [
 		{ label: 'Ari', value: 'ari' },
 		{ label: 'Asoke', value: 'asoke' },
@@ -38,9 +37,15 @@ const BurgerCard: FunctionComponent = () => {
 	const [selectedPriceRange, setSelectedPriceRange] = useState<any>()
 	const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
 	const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
+	const burgerLocation =
+		selectedLocation &&
+		burgerPlaces.filter(({ location }) => {
+			return selectedLocation.value === location
+		})
+	const shownBurgers = !burgerLocation ? burgerPlaces : burgerLocation
 
-	const allBurgerData = burgerPlaces.map(
-		({ name, location, price_range, ranking, delivery, tags, description }) => {
+	const allBurgerData = shownBurgers.map(
+		({ name, location, price_range, ranking, delivery, tags, description }: any) => {
 			return (
 				<>
 					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg mx-auto'>
@@ -64,37 +69,7 @@ const BurgerCard: FunctionComponent = () => {
 			)
 		}
 	)
-	const burgerLocation =
-		selectedLocation &&
-		burgerPlaces.filter(({ location }) => {
-			return selectedLocation.value === location
-		})
 
-const showBurgers = !burgerLocation ? allBurgerData : burgerLocation.map(
-	({ name, location, price_range, ranking, delivery, tags, description }: any) => {
-		return (
-			<>
-				<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg mx-auto'>
-					<div className='w-full md:w-3/4 grid grid-cols-2'>
-						<label>Name</label> <span className='capitalize'>{name}</span>
-						<label>Location</label>{' '}
-						<span className='capitalize'>{location}</span>
-						<label>Price</label>{' '}
-						<span className='capitalize'>{price_range}</span>
-						<label>Ranking</label>{' '}
-						<span className='capitalize'>{ranking}</span>
-						<label>Delivery</label>{' '}
-						<span className='capitalize'>{delivery}</span>
-						<label>Tags</label>{' '}
-						<span className='capitalize'>{tags}</span>
-						{/* <label>Description</label>{' '} */}
-						{/* <span className='capitalize'>{description}</span> */}
-					</div>
-				</div>
-			</>
-		)
-	}
-) 		
 
 	return (
 		<>
@@ -135,7 +110,7 @@ const showBurgers = !burgerLocation ? allBurgerData : burgerLocation.map(
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 			</div>
-			{showBurgers}
+			{allBurgerData}
 		</>
 	)
 }
