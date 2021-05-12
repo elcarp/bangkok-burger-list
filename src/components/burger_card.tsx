@@ -44,9 +44,9 @@ const BurgerCard: FunctionComponent = () => {
 			return selectedLocation.value === location
 		})
 
-	const shownBurgers = !burgerLocation ? burgerPlaces : burgerLocation
+	const filteredBurgers = !burgerLocation ? burgerPlaces : burgerLocation
 
-	const allBurgerData = shownBurgers.map(
+	const showBurgers = filteredBurgers.map(
 		({ name, location, price_range, ranking, delivery, tags, description }: any) => {
 			return (
 				<>
@@ -112,7 +112,7 @@ const BurgerCard: FunctionComponent = () => {
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 			</div>
-			{allBurgerData}
+			{showBurgers}
 		</>
 	)
 }
