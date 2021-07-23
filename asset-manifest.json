@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.ffa6a6b8.chunk.css",
-    "main.js": "/static/js/main.a7d8b32a.chunk.js",
-    "main.js.map": "/static/js/main.a7d8b32a.chunk.js.map",
+    "main.css": "/static/css/main.3fe17441.chunk.css",
+    "main.js": "/static/js/main.2b8e0b89.chunk.js",
+    "main.js.map": "/static/js/main.2b8e0b89.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0be78f42.js",
     "runtime-main.js.map": "/static/js/runtime-main.0be78f42.js.map",
     "static/js/2.c251ac30.chunk.js": "/static/js/2.c251ac30.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.e809c46b.chunk.js": "/static/js/3.e809c46b.chunk.js",
     "static/js/3.e809c46b.chunk.js.map": "/static/js/3.e809c46b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ffa6a6b8.chunk.css.map": "/static/css/main.ffa6a6b8.chunk.css.map",
+    "static/css/main.3fe17441.chunk.css.map": "/static/css/main.3fe17441.chunk.css.map",
     "static/js/2.c251ac30.chunk.js.LICENSE.txt": "/static/js/2.c251ac30.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/bangkok-burger-list.8f6f99a4.jpg",
     "static/media/burger.a07c91cb.png": "/static/media/burger.a07c91cb.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.0be78f42.js",
     "static/js/2.c251ac30.chunk.js",
-    "static/css/main.ffa6a6b8.chunk.css",
-    "static/js/main.a7d8b32a.chunk.js"
+    "static/css/main.3fe17441.chunk.css",
+    "static/js/main.2b8e0b89.chunk.js"
   ]
 }
