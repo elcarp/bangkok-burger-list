@@ -49,6 +49,10 @@ const BurgerCard: FunctionComponent = () => {
 	const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
 	const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
 
+	function resetFilter() {
+		setSelectedLocation('all_burgers')
+	}
+
 	const burgerFilter =
 		selectedLocation &&
 		burgerPlaces.filter(({ location }) => {
@@ -162,6 +166,11 @@ const BurgerCard: FunctionComponent = () => {
 					isDisabled={true}
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
+			</div>
+			<div>
+				<button onClick={resetFilter} className='mt-10 bg-ketchup text-white px-6 py-2 rounded-lg focus:outline-none border-ketchup hover:text-ketchup border hover:bg-transparent'>
+					Clear Filters
+				</button>
 			</div>
 			{!selectedLocation.value ? allBurgers : showBurgers}
 		</>
