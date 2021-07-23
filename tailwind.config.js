@@ -2,6 +2,15 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
 	theme: {
+		colors: {
+			ketchup: {
+				DEFAULT: '#940600',
+			},
+			transparent: {
+				DEFAULT: 'transparent',
+			},
+			white: { DEFAULT: '#fff' },
+		},
 		screens: {
 			sm: '569px',
 			md: '768px',

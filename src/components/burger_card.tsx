@@ -1,18 +1,18 @@
-import { FunctionComponent, useState } from 'react'
+import { FunctionComponent, useEffect, useState } from 'react'
 import Select from 'react-select'
 import data from '../api/burger_places.json'
 
 const burgerPlaces = data.burgerPlaces
 
-interface BurgerType {
-	name: string
-	location: string
-	 price_range: string
-	 ranking: string
-	 delivery: Array<string>
-	 tags: Array<string>
-	 description: string
-}
+// interface BurgerType {
+// 	name: string
+// 	location: string
+// 	price_range: string
+// 	ranking: string
+// 	delivery: Array<string>
+// 	tags: Array<string>
+// 	description: string
+// }
 
 const BurgerCard: FunctionComponent = () => {
 	const locationOptions = [
@@ -20,6 +20,7 @@ const BurgerCard: FunctionComponent = () => {
 		{ label: 'Asoke', value: 'asoke' },
 		{ label: 'Phrom Phong', value: 'phrom_phong' },
 		{ label: 'Ploen Chit', value: 'ploen_chit' },
+		{ label: 'All Burgers', value: '' },
 	]
 
 	const priceOptions = [
@@ -43,28 +44,40 @@ const BurgerCard: FunctionComponent = () => {
 		{ label: 'Smash Burgers', value: 'smash_burgers' },
 		{ label: 'Vegetarian Friendly', value: 'vegetarian_friendly' },
 	]
-	const [selectedLocation, setSelectedLocation] = useState<any>()
+	const [selectedLocation, setSelectedLocation] = useState<any>('all_burgers')
 	const [selectedPriceRange, setSelectedPriceRange] = useState<any>()
 	const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
 	const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
-	
-	const burgerLocation =
+
+	function resetFilter() {
+		setSelectedLocation('all_burgers')
+	}
+
+	const burgerFilter =
 		selectedLocation &&
 		burgerPlaces.filter(({ location }) => {
 			return selectedLocation.value === location
 		})
 
-	const filteredBurgers = !burgerLocation ? burgerPlaces : burgerLocation
+	const filteredBurgers = !burgerFilter ? burgerPlaces : burgerFilter
 
-	const showBurgers = filteredBurgers.map(
-		({ name, location, price_range, ranking, delivery, tags, description }: BurgerType) => {
+	const allBurgers = burgerPlaces.map(
+		({
+			name,
+			location,
+			price_range,
+			ranking,
+			delivery,
+			tags,
+			description,
+		}: any) => {
 			return (
 				<>
 					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg mx-auto'>
 						<div className='w-full md:w-3/4 grid grid-cols-2'>
 							<label>Name</label> <span className='capitalize'>{name}</span>
 							<label>Location</label>{' '}
-							<span className='capitalize'>{location.replace(/_/g, " ")}</span>
+							<span className='capitalize'>{location.replace(/_/g, ' ')}</span>
 							<label>Price</label>{' '}
 							<span className='capitalize'>{price_range}</span>
 							<label>Ranking</label>{' '}
@@ -81,7 +94,39 @@ const BurgerCard: FunctionComponent = () => {
 			)
 		}
 	)
-
+	const showBurgers = filteredBurgers.map(
+		({
+			name,
+			location,
+			price_range,
+			ranking,
+			delivery,
+			tags,
+			description,
+		}: any) => {
+			return (
+				<>
+					<div className='bg-white rounded-lg text-left w-full md:w-1/2 mt-10 p-4 shadow-lg mx-auto'>
+						<div className='w-full md:w-3/4 grid grid-cols-2'>
+							<label>Name</label> <span className='capitalize'>{name}</span>
+							<label>Location</label>{' '}
+							<span className='capitalize'>{location.replace(/_/g, ' ')}</span>
+							<label>Price</label>{' '}
+							<span className='capitalize'>{price_range}</span>
+							<label>Ranking</label>{' '}
+							<span className='capitalize'>{ranking}</span>
+							<label>Delivery</label>{' '}
+							<span className='capitalize'>{delivery.join(', ')}</span>
+							<label>Tags</label>{' '}
+							<span className='capitalize'>{tags.join(', ')}</span>
+							{/* <label>Description</label>{' '} */}
+							{/* <span className='capitalize'>{description}</span> */}
+						</div>
+					</div>
+				</>
+			)
+		}
+	)
 
 	return (
 		<>
@@ -122,7 +167,12 @@ const BurgerCard: FunctionComponent = () => {
 					className='text-left w-full md:w-1/4 md:mx-4'
 				/>
 			</div>
-			{showBurgers}
+			<div>
+				<button onClick={resetFilter} className='mt-10 bg-ketchup text-white px-6 py-2 rounded-lg focus:outline-none border-ketchup hover:text-ketchup border hover:bg-transparent'>
+					Clear Filters
+				</button>
+			</div>
+			{!selectedLocation.value ? allBurgers : showBurgers}
 		</>
 	)
 }
