@@ -48,13 +48,15 @@ const BurgerCard: FunctionComponent = () => {
 	const [selectedDeliveryOption, setSelectedDeliveryOption] = useState<any>()
 	const [selectedTagOptions, setSelectedTagOptions] = useState<any>()
 	
-	const burgerLocation =
+	const burgerFilter =
 		selectedLocation &&
 		burgerPlaces.filter(({ location }) => {
 			return selectedLocation.value === location
 		})
 
-	const filteredBurgers = !burgerLocation ? burgerPlaces : burgerLocation
+
+
+	const filteredBurgers = !burgerFilter ? burgerPlaces : burgerFilter
 
 	const showBurgers = filteredBurgers.map(
 		({ name, location, price_range, ranking, delivery, tags, description }: BurgerType) => {
